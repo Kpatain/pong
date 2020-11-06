@@ -1,13 +1,24 @@
 body{
+    /** couleurs & font **/
     background-color: #000;
     color: #fff;
     font-family: monospace;
+
+    /** centering **/
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 #terrain{
+    /** bordure blanche visible **/
     position: relative;
     border : 1px solid white;
 
+    /** dimension terrain**/
     width: 800px;
     height: 400px;
 
@@ -15,8 +26,12 @@ body{
 
 #balle{
     position: absolute;
+
+    /** la balle est au centre**/
     top: 50%;
     left: 50%;
+
+    /** Design de la balle **/
     border-radius: 10px;
     width: 20px;
     height: 20px;
