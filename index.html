@@ -9,11 +9,20 @@
     </html>
     <body>
         <!-- affichage terrain-->
-        <div id="terrain">
-            <!-- affichage ball dans terrain-->
+        <div id="terrain" class="tilt">
+            <!-- affichage balle dans terrain-->
             <div id="balle"></div>
+
+            <!-- affichage la raquette dans terrain-->
+            <!-- gauche -->
+            <div id="raquette" class="gauche"></div>
+            <!-- droite -->
+            <div id="raquette" class="droite"></div>
         
         </div>
     </body>
-    <script src="js/pong.js"></script>
+    <script src="js/Balle.js"></script>
+    <script src="js/Terrain.js"></script>
+    <script src="js/Raquette.js"></script>
+    <script src="js/main.js"></script>
 </html>

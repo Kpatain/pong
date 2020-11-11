@@ -16,11 +16,17 @@ body{
 #terrain{
     /** bordure blanche visible **/
     position: relative;
-    border : 1px solid white;
+    border-top : 1px solid white;
+    border-bottom : 1px solid white;
 
     /** dimension terrain**/
     width: 800px;
     height: 400px;
+
+}
+
+.tilt{
+    border-color:  rgb(0, 255, 13) !important;
 
 }
 
@@ -35,5 +41,27 @@ body{
     border-radius: 10px;
     width: 20px;
     height: 20px;
-    background-color: #fff;
+    background-color: rgb(255, 255, 255);
+}
+
+.raquette{
+    position: absolute;
+    --hauteur : 200px;
+    top : calc( 50% - var(--hauteur)/2 ); /** milieu de page */
+
+    /** design**/
+    width: 10px;
+    height : var(--hauteur);
+    background-color: rgb(255, 255, 255);
+
+}
+
+#gauche{
+    /** position initial**/
+    right: 1%;
+}
+
+#droite{
+    /** position initial**/
+    left: 1%;
 }
