@@ -26,7 +26,7 @@ body{
 }
 
 .tilt{
-    border-color:  rgb(0, 255, 13) !important;
+    border-color:  rgb(0, 255, 0) !important;
 
 }
 
@@ -46,7 +46,9 @@ body{
 
 .raquette{
     position: absolute;
-    --hauteur : 200px;
+
+    --hauteur : 25%;
+
     top : calc( 50% - var(--hauteur)/2 ); /** milieu de page */
 
     /** design**/
@@ -56,12 +58,14 @@ body{
 
 }
 
+/** raquettes gauche et droite**/
+
 #gauche{
-    /** position initial**/
+
     right: 1%;
 }
 
 #droite{
-    /** position initial**/
+    
     left: 1%;
 }
