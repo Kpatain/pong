@@ -1,7 +1,9 @@
 
 //Création objet this
-class Raquette{
-    constructor($element){
+class Raquette
+{
+    constructor($element)
+    {
         this.$element = $element;
         this.haut = parseInt($element.css("top"));
         this.gauche = parseInt($element.css("left"));
