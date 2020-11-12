@@ -5,6 +5,8 @@ class Balle
     {
         this.$element = $element;
 
+        this.largeur = $element.width();
+
         this.haut = parseInt($element.css("top"));
         this.gauche = parseInt($element.css("left"));
 
@@ -15,16 +17,28 @@ class Balle
         this.angle = Math.random()*360 * Math.PI / 180;
     }
 
+    //Mouvement de la balle
+    bouger()
+    {
+        this.gauche += Math.cos(this.angle) * this.vitesseX;
+        this.haut += Math.sin(this.angle) * this.vitesseY;
+        
+        //Fonctions annexes
+        this.limite(); 
+        this.majHTML();
+    }
 
-    limite(oui,non)
+
+    limite()
     {
         // On detecte les bords
         //Droite
-        if(this.gauche > terrain.largeur - this.balleRayon);
+        if(this.gauche > terrain.largeur - this.balleRayon)
         {
             this.gauche = terrain.largeur - this.balleRayon;
             this.vitesseX *= -1;
         }
+        
         //Bas
         if(this.haut > terrain.hauteur - this.balleRayon)
         {
@@ -33,14 +47,14 @@ class Balle
             terrain.tilt();
         }
         //Haut
-        if (this.haut < 0);
+        if (this.haut <= 0)
         {
             this.vitesseY *= -1;
             this.haut = 0;
             terrain.tilt();
         }
         //Gauche
-        if (this.gauche < 0)
+        if (this.gauche <= 0)
         {
             this.vitesseX *= -1;
             this.gauche = 0;
@@ -48,16 +62,6 @@ class Balle
         this.majHTML();
     }
 
-    //Mouvement de la balle
-    bouger()
-    {
-        this.gauche += Math.cos(this.angle) * this.vitesseX;
-        this.haut += Math.sin(this.angle) * this.vitesseY;
-        
-        //Fonctions annexes
-        this.limite();
-        this.majHTML();
-    }
 
     //Update HTML
     majHTML()

@@ -14,12 +14,11 @@ class Terrain
         let ici = this;
         
         //on retire la Classe css
-        setTimeout
-        (
+        setTimeout(
             function()
             {
                 ici.$element.removeClass("tilt");
-            },100
+            },300
         );
     }
     

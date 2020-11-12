@@ -11,5 +11,5 @@ setInterval(function(){
     raquetteG.bouger();
     
     raquetteD.bouger();
-
+    console.log(balle)
 }, 10);
