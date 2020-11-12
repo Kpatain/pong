@@ -1,7 +1,6 @@
 
 //Création objet this
-class Raquette
-{
+class Raquette{
     constructor($element)
     {
         this.$element = $element;

@@ -1,6 +1,5 @@
 //Création objet Terrain
-class Terrain
-{
+class Terrain{
     constructor($element)
     {
         this.$element = $element;

@@ -29,8 +29,7 @@ class Balle
     }
 
 
-    limite()
-    {
+    limite(){
         // On detecte les bords
         //Droite
         if(this.gauche > terrain.largeur - this.balleRayon)
