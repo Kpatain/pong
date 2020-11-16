@@ -1,4 +1,5 @@
-body{
+body
+{
     /** couleurs & font **/
     background-color: #000;
     color: #fff;
@@ -13,7 +14,8 @@ body{
     text-align: center;
 }
 
-#terrain{
+#terrain
+{
     /** bordure blanche visible **/
     position: relative;
     border-top : 1px solid white;
@@ -25,12 +27,21 @@ body{
 
 }
 
-.tilt{
-    border-color:  rgb(0, 255, 0) !important;
+
+.tiltHaut
+{
+    border-top-color:  rgb(0, 255, 0) !important;
 
 }
 
-#balle{
+.tiltBas
+{
+    border-bottom-color:  rgb(0, 255, 0) !important;
+
+}
+
+#balle
+{
     position: absolute;
 
     /** la balle est au centre**/
@@ -44,7 +55,8 @@ body{
     background-color: rgb(255, 255, 255);
 }
 
-.raquette{
+.raquette
+{
     position: absolute;
 
     --hauteur : 25%;
@@ -60,12 +72,15 @@ body{
 
 /** raquettes gauche et droite**/
 
-#gauche{
+#gauche
+{
+
+    left: 1%;
+}
+
+#droite
+{
 
     right: 1%;
 }
 
-#droite{
-    
-    left: 1%;
-}

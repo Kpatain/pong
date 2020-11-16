@@ -17,6 +17,16 @@ class Balle
         this.angle = Math.random()*360 * Math.PI / 180;
     }
 
+    get bas()
+    {
+        return this.haut+this.largeur;
+    }
+
+    get droite()
+    {
+        return this.gauche+this.largeur;
+    }
+
     //Mouvement de la balle
     bouger()
     {
@@ -29,28 +39,29 @@ class Balle
     }
 
 
-    limite(){
+    limite()
+    {
         // On detecte les bords
         //Droite
-        if(this.gauche > terrain.largeur - this.balleRayon)
+        if(this.droite > terrain.largeur)
         {
             this.gauche = terrain.largeur - this.balleRayon;
             this.vitesseX *= -1;
         }
         
         //Bas
-        if(this.haut > terrain.hauteur - this.balleRayon)
+        if(this.bas > terrain.hauteur)
         {
             this.vitesseY *= -1;
             this.haut = terrain.hauteur - this.balleRayon;
-            terrain.tilt();
+            terrain.tiltBas();
         }
         //Haut
         if (this.haut <= 0)
         {
             this.vitesseY *= -1;
             this.haut = 0;
-            terrain.tilt();
+            terrain.tiltHaut();
         }
         //Gauche
         if (this.gauche <= 0)
@@ -62,10 +73,19 @@ class Balle
     }
 
 
+    /***
+    rebond()
+    {
+        if (this.haut)
+    }
+     */
+
+
     //Update HTML
     majHTML()
     {
         this.$element.css("left", this.gauche);
         this.$element.css("top", this.haut);
     }
+
 }

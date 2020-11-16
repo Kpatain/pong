@@ -7,16 +7,32 @@ class Terrain{
         this.hauteur=$element.height();
     }
 
-    tilt(){
+    tiltHaut()
+    {
         //on met la Classe css
-        this.$element.addClass("tilt");
+        this.$element.addClass("tiltHaut");
         let ici = this;
         
         //on retire la Classe css
         setTimeout(
             function()
             {
-                ici.$element.removeClass("tilt");
+                ici.$element.removeClass("tiltHaut");
+            },300
+        );
+    }
+
+    tiltBas()
+    {
+        //on met la Classe css
+        this.$element.addClass("tiltBas");
+        let ici = this;
+
+        //on retire la Classe css
+        setTimeout(
+            function()
+            {
+                ici.$element.removeClass("tiltBas");
             },300
         );
     }
