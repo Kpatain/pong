@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2eb2e82b-10ae-4c19-8f17-f1b7257635fb" name="Default Changelist" comment="" />
+    <list default="true" id="2eb2e82b-10ae-4c19-8f17-f1b7257635fb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/pong.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pong.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/Balle.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Balle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/Raquette.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Raquette.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +28,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -30,10 +41,26 @@
       <option name="presentableId" value="Default" />
       <updated>1605532747485</updated>
       <workItem from="1605532748797" duration="6182000" />
+      <workItem from="1605705202010" duration="4031000" />
+      <workItem from="1605709621951" duration="6767000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="32" y="412" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1605712462491">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="32" y="412" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1858.1080/1920.184.1920.1040/-1920.0.1920.1040@0.0.1858.1080" timestamp="1605712462491" />
+    <state x="430" y="185" key="SettingsEditor" timestamp="1605709220769">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="430" y="185" key="SettingsEditor/0.0.1858.1080/1920.184.1920.1040/-1920.0.1920.1040@0.0.1858.1080" timestamp="1605709220769" />
+    <state x="114" y="747" width="672" height="678" key="search.everywhere.popup" timestamp="1605710422705">
+      <screen x="0" y="0" width="1858" height="1080" />
+    </state>
+    <state x="114" y="747" width="672" height="678" key="search.everywhere.popup/0.0.1858.1080/1920.184.1920.1040/-1920.0.1920.1040@0.0.1858.1080" timestamp="1605710422705" />
   </component>
 </project>

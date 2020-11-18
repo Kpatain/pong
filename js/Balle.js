@@ -19,12 +19,22 @@ class Balle
 
     get bas()
     {
-        return this.haut+this.largeur;
+        return this.haut + this.largeur;
+    }
+
+    set bas(value)
+    {
+        this.haut = value - this.balleRayon;
     }
 
     get droite()
     {
-        return this.gauche+this.largeur;
+        return this.gauche + this.largeur;
+    }
+
+    set droite(value)
+    {
+        this.gauche = value - this.balleRayon;
     }
 
     //Mouvement de la balle
@@ -34,7 +44,9 @@ class Balle
         this.haut += Math.sin(this.angle) * this.vitesseY;
         
         //Fonctions annexes
-        this.limite(); 
+
+
+        this.limite();
         this.majHTML();
     }
 
@@ -45,15 +57,14 @@ class Balle
         //Droite
         if(this.droite > terrain.largeur)
         {
-            this.gauche = terrain.largeur - this.balleRayon;
-            this.vitesseX *= -1;
+            this.recentrer();
         }
         
         //Bas
         if(this.bas > terrain.hauteur)
         {
             this.vitesseY *= -1;
-            this.haut = terrain.hauteur - this.balleRayon;
+            this.bas = terrain.hauteur;
             terrain.tiltBas();
         }
         //Haut
@@ -66,21 +77,45 @@ class Balle
         //Gauche
         if (this.gauche <= 0)
         {
-            this.vitesseX *= -1;
-            this.gauche = 0;
+            this.recentrer();
         }
+
+        this.rebond();
         this.majHTML();
     }
 
-
-    /***
     rebond()
     {
-        if (this.haut)
+        //DROITE
+        // Histoire de vous mettre sur la voie un petit bout de code pour savoir si ma balle touche la raquette gauche, à vous de définir où mettre ça et quoi faire dans ce cas là
+        if (this.droite > raquetteD.gauche) {       //si la balle dépasse à gauche la raquette gauche
+            if (this.bas > raquetteD.haut) {        //et si la balle est plus basse que le haut de la raquette
+                if (this.haut < raquetteD.bas) {    // et si la balle est plus haute que le bas de la raquette
+                    this.vitesseX *= -1;
+                    console.log(1)
+                    // donc la balle va rebondir sur la raquette, à vous de jouer!
+                }
+            }
+        }
+
+        //GAUCHE
+        // Histoire de vous mettre sur la voie un petit bout de code pour savoir si ma balle touche la raquette gauche, à vous de définir où mettre ça et quoi faire dans ce cas là
+        if (this.gauche < raquetteG.droite) {       //si la balle dépasse à gauche la raquette gauche
+            if (this.bas > raquetteG.haut) {        //et si la balle est plus basse que le haut de la raquette
+                if (this.haut < raquetteG.bas) {    // et si la balle est plus haute que le bas de la raquette
+                    this.vitesseX *= -1;
+                    console.log(2)
+                    // donc la balle va rebondir sur la raquette, à vous de jouer!
+                }
+            }
+        }
     }
-     */
 
-
+    recentrer()
+    {
+        this.haut = terrain.hauteur/2
+        this.gauche = terrain.largeur/2
+    }
     //Update HTML
     majHTML()
     {

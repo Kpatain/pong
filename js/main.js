@@ -8,34 +8,32 @@ let raquetteG = new Raquette($("#gauche"));
 setInterval(function()
 {
     balle.bouger();
-
     raquetteG.bouger();
     raquetteD.bouger();
-
-    //balle.rebond();
 
 }, 10);
 
 
-//Key listener
+
+//APPUIE
 window.addEventListener("keydown", function (event) {
-    if (event.defaultPrevented) { return}
-    if (event.key === "a" || envent.key === "A")
+    if (event.defaultPrevented) {return}
+    if (event.key === "a" || event.key === "A")
     {
         raquetteG.monter();
     }
 
-    if (event.key === "q" || envent.key === "Q")
+    else if (event.key === "q" || event.key === "Q")
     {
         raquetteG.descendre();
     }
 
-    if (event.key === "p" || envent.key === "P")
+    else if (event.key === "p" || event.key === "P")
     {
         raquetteD.monter();
     }
 
-    if (event.key === "m" || envent.key === "M")
+    else if (event.key === "m" || event.key === "M")
     {
         raquetteD.descendre();
     }
@@ -43,28 +41,30 @@ window.addEventListener("keydown", function (event) {
     event.preventDefault();
 }, true);
 
-window.addEventListener("keyup", function (event) {
-    if (event.defaultPrevented) { return}
-    if (event.key === "a" || envent.key === "A")
+//RELACHE
+window.addEventListener("keyup", function (event)
+{
+    if (event.defaultPrevented) {return}
+    if (event.key === "a"
+        || event.key === "A"
+        || event.key === "q"
+        || event.key === "Q")
     {
         raquetteG.arret();
     }
 
-    if (event.key === "q" || envent.key === "Q")
+    else if (event.key === "q" || event.key === "Q")
     {
         raquetteG.arret();
     }
 
-    if (event.key === "p" || envent.key === "P")
-    {
-        raquetteD.arret();
-    }
-
-    if (event.key === "m" || envent.key === "M")
+    if (event.key === "p"
+        || event.key === "P"
+        || event.key === "m"
+        || event.key === "M")
     {
         raquetteD.arret();
     }
 
     event.preventDefault();
 }, true);
-

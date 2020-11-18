@@ -5,10 +5,27 @@ class Raquette
     constructor($element)
     {
         this.$element = $element;
+
+        /**
+         *
+         * @type {number}
+         */
         this.haut = parseInt($element.css("top"));
+
+        /**
+         *
+         * @type {number}
+         */
         this.gauche = parseInt($element.css("left"));
-        this.vitesseY = 1;
+
+        /**
+         *
+         * @type {number}
+         */
+        this.vitesseY = 1.5;
         this.hauteur = $element.height();
+
+        this.largeur = $element.width();
 
         this.direction = 0;
     }
@@ -16,6 +33,21 @@ class Raquette
     get bas()
     {
         return this.haut+this.hauteur;
+    }
+
+    set bas(value)
+    {
+        this.haut = value - this.hauteur;
+    }
+
+    get droite()
+    {
+        return this.gauche+this.largeur;
+    }
+
+    set droite(value)
+    {
+        this.gauche = value - this.largeur;
     }
 
     bouger()
@@ -26,6 +58,7 @@ class Raquette
         this.majHTML();
     }
 
+    //Liste des fonctions de mouvement
     monter()
     {
         this.direction = -1;
@@ -41,23 +74,24 @@ class Raquette
         this.direction = 0;
     }
 
+    /**
+     * evite que les raquettes sortent du terrain
+     */
     limite()
     {
         //Colision raquette
-        //Bas
-        if(this.bas > terrain.hauteur){
-            this.vitesseY *= -1;
-            this.haut = terrain.hauteur - this.hauteur;
+        if(this.bas > terrain.hauteur)
+        {
+            this.bas = terrain.hauteur;
         }
-        //Haut
-        if (this.haut < 0){
-            this.vitesseY *= -1;
+
+        if (this.haut < 0)
+        {
             this.haut = 0;
         }
-
     }
 
-
+    //update
     majHTML()
     {
         this.$element.css("top", this.haut);
