@@ -58,6 +58,7 @@ class Balle
         if(this.droite > terrain.largeur)
         {
             this.recentrer();
+            terrain.tiltEchecD();
         }
         
         //Bas
@@ -77,6 +78,7 @@ class Balle
         //Gauche
         if (this.gauche <= 0)
         {
+            terrain.tiltEchecG();
             this.recentrer();
         }
 

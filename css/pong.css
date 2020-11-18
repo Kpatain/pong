@@ -20,6 +20,8 @@ body
     position: relative;
     border-top : 1px solid white;
     border-bottom : 1px solid white;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
 
     /** dimension terrain**/
     width: 800px;
@@ -38,6 +40,16 @@ body
 {
     border-bottom-color:  rgb(0, 255, 0) !important;
 
+}
+
+.tiltEchecG
+{
+    border-left-color: rgb(150, 0, 0) !important;
+}
+
+.tiltEchecD
+{
+    border-right-color: rgb(150, 0, 0) !important;
 }
 
 #balle

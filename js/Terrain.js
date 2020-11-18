@@ -36,5 +36,36 @@ class Terrain{
             },300
         );
     }
+
+    tiltEchecG()
+    {
+        //on met la Classe css
+        this.$element.addClass("tiltEchecG");
+        let ici = this;
+
+        //on retire la Classe css
+        setTimeout(
+            function()
+            {
+                ici.$element.removeClass("tiltEchecG");
+            },100
+        );
+    }
+
+    tiltEchecD()
+    {
+        //on met la Classe css
+        this.$element.addClass("tiltEchecD");
+        let ici = this;
+
+        //on retire la Classe css
+        setTimeout(
+            function()
+            {
+            ici.$element.removeClass("tiltEchecD");
+            },100
+        );
+
+    }
     
 }
