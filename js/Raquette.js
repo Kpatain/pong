@@ -22,7 +22,7 @@ class Raquette
          *
          * @type {number}
          */
-        this.vitesseY = 1.5;
+        this.vitesseY = 0.5;
         this.hauteur = $element.height();
 
         this.largeur = $element.width();
