@@ -25,8 +25,9 @@
     <list default="true" id="2eb2e82b-10ae-4c19-8f17-f1b7257635fb" name="Default Changelist" comment="a">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/pong.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/pong.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/Balle.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Balle.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/Terrain.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Terrain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/Raquette.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/Raquette.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +48,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../UnseriusGame" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../UnseriusGame/styles/style.css" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -98,9 +99,10 @@
       <screen x="0" y="0" width="1858" height="1080" />
     </state>
     <state x="32" y="412" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1858.1080/1920.184.1920.1040/-1920.0.1920.1040@0.0.1858.1080" timestamp="1605712462491" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1606138549913">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="716" y="286" key="FileChooserDialogImpl" timestamp="1606323184538">
+      <screen x="0" y="0" width="1858" height="1080" />
     </state>
+    <state x="716" y="286" key="FileChooserDialogImpl/0.0.1858.1080/1920.184.1920.1040/-1920.0.1920.1040@0.0.1858.1080" timestamp="1606323184538" />
     <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606138549913" />
     <state x="430" y="185" key="SettingsEditor" timestamp="1605709220769">
       <screen x="0" y="0" width="1858" height="1080" />

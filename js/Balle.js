@@ -12,7 +12,7 @@ class Balle
 
         this.vitesseX = 2;
         this.vitesseY = 0.6;
-        this.vitesse =  this.vitesseX / this.vitesseY;
+        this.vitesseMax = 8;
 
         this.balleRayon = 20;
         this.angle = Math.random()*360 * Math.PI / 180;
@@ -60,7 +60,6 @@ class Balle
         {
             this.recentrer();
             terrain.tiltEchecD();
-            window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ",  '_blank')
         }
         
         //Bas
@@ -82,7 +81,6 @@ class Balle
         {
             terrain.tiltEchecG();
             this.recentrer();
-            window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ",  '_blank')
         }
 
         this.rebond();
@@ -97,8 +95,7 @@ class Balle
             if (this.bas > raquetteD.haut) {        //et si la balle est plus basse que le haut de la raquette
                 if (this.haut < raquetteD.bas) {    // et si la balle est plus haute que le bas de la raquette
                     this.vitesseX *= -1;
-                    this.vitesseX *= 1.1;
-                    console.log(1)
+                    this.acceleration();
                     // donc la balle va rebondir sur la raquette, à vous de jouer!
                 }
             }
@@ -110,8 +107,7 @@ class Balle
             if (this.bas > raquetteG.haut) {        //et si la balle est plus basse que le haut de la raquette
                 if (this.haut < raquetteG.bas) {    // et si la balle est plus haute que le bas de la raquette
                     this.vitesseX *= -1;
-                    this.vitesseX *= 1.1;
-                    console.log(2)
+                    this.acceleration();
                     // donc la balle va rebondir sur la raquette, à vous de jouer!
                 }
             }
@@ -122,6 +118,16 @@ class Balle
     {
         this.haut = terrain.hauteur/2
         this.gauche = terrain.largeur/2
+    }
+
+    //acceleration de la balle quand elle touche les raquettes
+    acceleration()
+    {
+        if (Math.abs(this.vitesseX) < this.vitesseMax)
+        {
+            this.vitesseX *= 1.1;
+            console.log(Math.abs(this.vitesseX));
+        }
     }
     //Update HTML
     majHTML()
