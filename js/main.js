@@ -1,9 +1,40 @@
 //on renprend les infos du css / création des objets
-
+/**
+ *
+ * @type {Terrain}
+ */
 let terrain = new Terrain($("#terrain"));
+
+/**
+ *
+ * @type {Balle}
+ */
 let balle = new Balle($("#balle"));
+
+/**
+ *
+ * @type {Raquette}
+ */
 let raquetteD = new Raquette($("#droite"));
+
+/**
+ *
+ * @type {Raquette}
+ */
 let raquetteG = new Raquette($("#gauche"));
+
+/**
+ *
+ * @type {Joueur}
+ */
+let joueur0 = new Joueur($("#scoreg"));
+
+/**
+ *
+ * @type {Joueur}
+ */
+let joueur1 = new Joueur($("#scored"));
+
 
 setInterval(function()
 {
@@ -12,7 +43,6 @@ setInterval(function()
     raquetteD.bouger();
 
 }, 10);
-
 
 
 //APPUIE

@@ -18,7 +18,7 @@ class Terrain{
             function()
             {
                 ici.$element.removeClass("tiltHaut");
-            },300
+            },200
         );
     }
 
@@ -33,7 +33,7 @@ class Terrain{
             function()
             {
                 ici.$element.removeClass("tiltBas");
-            },300
+            },200
         );
     }
 

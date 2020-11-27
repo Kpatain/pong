@@ -94,22 +94,22 @@ body
 .score{
     /**CSS Score**/
     display: flex;
-    padding-top: 20%;
+    padding-top: 5%;
     text-align: center;
-    font-size:50px;
+    font-size:40px;
     font-family: 'Space Mono', cursive;
 }
 
 #scoreg{
     /**Precision pour le score d'id gauche**/
-    padding-left: 25%;
+    padding-left: 15%;
     float:left;
     color: #9500ff;
 }
 
 #scored{
     /**Precision pour la score d'id gauche**/
-    padding-right: 25%;
+    padding-right: 15%;
     float:right;
     color: #00ff0d;
 }
