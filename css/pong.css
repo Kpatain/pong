@@ -86,6 +86,11 @@ body
 
 }
 
+.tiltRaquette
+{
+    background-color: rgb(0, 152, 255) !important;
+}
+
 .score{
     /**CSS Score**/
     display: flex;
@@ -99,14 +104,14 @@ body
     /**Precision pour le score d'id gauche**/
     padding-left: 25%;
     float:left;
-    color: red;
+    color: #9500ff;
 }
 
 #scored{
     /**Precision pour la score d'id gauche**/
     padding-right: 25%;
     float:right;
-    color: blue;
+    color: #00ff0d;
 }
 
 /** raquettes gauche et droite**/

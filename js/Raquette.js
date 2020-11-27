@@ -91,6 +91,21 @@ class Raquette
         }
     }
 
+    tiltRaquette()
+    {
+        //on met la Classe css
+        this.$element.addClass("tiltRaquette");
+        let ici = this;
+        //on retire la Classe css
+        setTimeout(
+            function()
+            {
+                ici.$element.removeClass("tiltRaquette");
+            },100
+        );
+    }
+
+
     //update
     majHTML()
     {
