@@ -23,28 +23,49 @@ class Raquette
          * @type {number}
          */
         this.vitesseY = 2;
-        this.hauteur = $element.height();
 
+        this.hauteur = $element.height();
         this.largeur = $element.width();
 
+        /**
+         *
+         * @type {number}
+         */
         this.direction = 0;
+
     }
 
+    /**
+     *
+     * @returns {*}
+     */
     get bas()
     {
         return this.haut+this.hauteur;
     }
 
+    /**
+     *
+     * @param value
+     */
     set bas(value)
     {
         this.haut = value - this.hauteur;
     }
 
+    /**
+     *
+     * @returns {*}
+     */
     get droite()
     {
         return this.gauche+this.largeur;
     }
 
+    /**
+     *
+     * @param value
+     */
     set droite(value)
     {
         this.gauche = value - this.largeur;
@@ -89,6 +110,11 @@ class Raquette
         {
             this.haut = 0;
         }
+    }
+
+    ratio()
+    {
+        return ((balle.haut - this.haut) / this.hauteur);
     }
 
     tiltRaquette()

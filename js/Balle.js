@@ -164,7 +164,8 @@ class Balle
             if (this.bas > raquetteD.haut) {        //et si la balle est plus basse que le haut de la raquette
                 if (this.haut < raquetteD.bas) {    //et si la balle est plus haute que le bas de la raquette
                     raquetteD.tiltRaquette();       //tilt css de la raquette droite
-                    this.angle = Math.PI - this.angle;;
+                    //this.angle = Math.PI - this.angle;
+                    this.ratioRebond(true);
                     this.acceleration();            //la balle accelere a chaque raquette
                 }
             }
@@ -175,7 +176,8 @@ class Balle
             if (this.bas > raquetteG.haut) {        //et si la balle est plus basse que le haut de la raquette
                 if (this.haut < raquetteG.bas) {    // et si la balle est plus haute que le bas de la raquette
                     raquetteG.tiltRaquette();       //tilt css de la raquette gauche
-                    this.angle = Math.PI - this.angle;
+                    this.ratioRebond(false);
+                    //this.angle = Math.PI - this.angle;
                     this.acceleration();             //la balle accelere a chaque raquette
                 }
             }
@@ -190,7 +192,9 @@ class Balle
         this.vitesse = this.vitesseD;
         this.angle = this.defAngle();
 
-
+        //On remet les raquettes au milieu du terrain
+        raquetteG.haut = terrain.hauteur/2 - raquetteG.hauteur/2;
+        raquetteD.haut = terrain.hauteur/2 - raquetteD.hauteur/2;
     }
 
     //acceleration de la balle quand elle touche les raquettes
@@ -207,6 +211,27 @@ class Balle
         }
          */
     }
+
+    ratioRebond(b)
+    {
+        if (b)
+        {
+            this.vitesse = 2*Math.abs(raquetteD.ratio() - 0.5) + 1;
+            console.log(this.vitesse);
+            this.angle = -3*Math.PI/4 - raquetteD.ratio() * Math.PI/2;
+        }
+
+        else
+        {
+            this.vitesse = 2*Math.abs(raquetteG.ratio() - 0.5) + 1;
+            console.log(this.vitesse);
+            this.angle = -Math.PI/4 + raquetteG.ratio() * Math.PI/2;
+
+        }
+
+
+    }
+
     //Update HTML
     majHTML()
     {
