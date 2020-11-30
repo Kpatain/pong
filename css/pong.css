@@ -65,7 +65,7 @@ body
     left: 50%;
 
     /** Design de la balle **/
-    border-radius: 10px;
+    border-radius: 20px;
     width: 20px;
     height: 20px;
     background-color: rgb(255, 255, 255);
@@ -93,24 +93,27 @@ body
 
 .score{
     /**CSS Score**/
+    top : 0;
     display: flex;
-    padding-top: 5%;
-    text-align: center;
+    width: 50%;
+    height : 100%;
+    align-items: center;
+    justify-content: center;
+    outline : 1px dashed yellow;
+
     font-size:40px;
     font-family: 'Space Mono', cursive;
 }
 
 #scoreg{
     /**Precision pour le score d'id gauche**/
-    padding-left: 15%;
-    float:left;
+    float : left;
     color: #9500ff;
 }
 
 #scored{
     /**Precision pour la score d'id gauche**/
-    padding-right: 15%;
-    float:right;
+    float : right;
     color: #00ff0d;
 }
 

@@ -29,7 +29,7 @@ class Balle
          *
          * @type {number}
          */
-        this.vitesseD = 1.5;
+        this.vitesseD = 1.8;
 
         /**
          *
@@ -111,6 +111,10 @@ class Balle
         this.haut += Math.sin(this.angle) * this.vitesse;
         
         //Fonctions annexes
+
+        this.$element.css("width", 20+ 20* Math.sin(this.ballesaut()));
+        this.$element.css("height", 20+ 20 * Math.sin(this.ballesaut()));
+        console.log(this.$element.css("height"));
 
 
         this.limite();
@@ -216,7 +220,8 @@ class Balle
     {
         if (b)
         {
-            this.vitesse = 2*Math.abs(raquetteD.ratio() - 0.5) + 1;
+            //this.vitesse = 2*Math.abs(raquetteD.ratio() - 0.5) + 1;
+            this.vitesse *= raquetteD.ratio() + 1
             console.log(this.vitesse);
             this.angle = -3*Math.PI/4 - raquetteD.ratio() * Math.PI/2;
         }
@@ -230,6 +235,13 @@ class Balle
         }
 
 
+    }
+
+    ballesaut()
+    {
+        var rat = 1 - 2*Math.abs((this.gauche - terrain.largeur/2) / terrain.largeur);
+        console.log("rat", rat);
+        return rat;
     }
 
     //Update HTML
