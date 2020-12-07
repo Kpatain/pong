@@ -35,14 +35,35 @@ let joueur0 = new Joueur($("#scoreg"));
  */
 let joueur1 = new Joueur($("#scored"));
 
+/**
+ *
+ * @type {boolean}
+ */
+let demarrer = false;
 
-setInterval(function()
-{
-    balle.bouger();
-    raquetteG.bouger();
-    raquetteD.bouger();
+let son = new Son();
 
+
+setInterval(function(){
+    if(demarrer)
+    {
+        balle.bouger();
+        raquetteG.bouger();
+        raquetteD.bouger();
+    }
 }, 10);
+
+// $("#btn-jouer").on("mousedown", function (event) {
+//     event.preventDefault(); //je ne vous explique pas pour l'instant à quoi ça sert c'est trop complexe
+//     console.log("tu as appuyé sur $monBouton");
+// });
+
+$("#btn-jouer").on("mouseup", function (event) {
+    event.preventDefault();
+    demarrer = true;
+    son.playNote("jecodeaveclecul");
+    $("#ecran-debut").addClass("invisible");
+});
 
 
 //APPUIE

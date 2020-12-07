@@ -3,13 +3,15 @@
         <link rel="stylesheet" href="css/pong.css"/>
         <!--import jQueries-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://code.createjs.com/1.0.0/soundjs.min.js"></script>
         <!-- Titre-->
         <title>PONG</title>
+
     </head>
 
 
     <body>
-        <div class="ecran-debut">
+        <div id="ecran-debut" class="ecran-debut">
             <div>
                 Joueur 1 <br><br>
                 utilisez les touches <br><br>
@@ -24,7 +26,7 @@
                 et
                 <span class="touche">M</span>
             </div>
-            <a href="#" class="btn btn-go">JOUER</a>
+            <a id ="btn-jouer" href="#" class="btn btn-go">JOUER</a>
         </div>
 
         <!-- affichage terrain-->
@@ -49,6 +51,7 @@
     </body>
 
     <!-- Les classes -->
+    <script src="js/Son.js"></script>
     <script src="js/Joueur.js"></script>
     <script src="js/Balle.js"></script>
     <script src="js/Terrain.js"></script>

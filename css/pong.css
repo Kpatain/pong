@@ -99,7 +99,6 @@ body
     height : 100%;
     align-items: center;
     justify-content: center;
-    outline : 1px dashed yellow;
 
     font-size:40px;
     font-family: 'Space Mono', cursive;
@@ -167,17 +166,17 @@ h1{
 }
 
 /* disparition de l'écran de début */
-.ecran-debut{
+#ecran-debut{
     transition: all 2s;
     transition-duration: 1s;
     will-change: opacity, filter;
     opacity: 1;
     filter: blur(0px);
 }
-.ecran-debut.invisible{
+#ecran-debut.invisible{
     pointer-events: none;
     opacity: 0;
-    filter: blur(25px);
+    filter: blur(10px);
 }
 
 /* Bouton du début */

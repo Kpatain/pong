@@ -74,7 +74,8 @@ class Raquette
     bouger()
     {
         //Mouvement raquette
-        this.haut += this.vitesseY * this.direction;
+        //this.haut += this.vitesseY * this.direction;
+        this.haut = balle.haut - Math.random()*this.hauteur/2;
         this.limite();
         this.majHTML();
     }

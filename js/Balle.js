@@ -171,6 +171,7 @@ class Balle
                     //this.angle = Math.PI - this.angle;
                     this.ratioRebond(true);
                     this.acceleration();            //la balle accelere a chaque raquette
+                    son.playNote("discord-call-sound");
                 }
             }
         }
@@ -183,6 +184,7 @@ class Balle
                     this.ratioRebond(false);
                     //this.angle = Math.PI - this.angle;
                     this.acceleration();             //la balle accelere a chaque raquette
+                    son.playNote("vocaroo_s04cqgr6wv7c");
                 }
             }
         }
